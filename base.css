@@ -1,7 +1,10 @@
 @charset "UTF-8";
 /*初始化*/
-body {
+body,html{
+	width: 100%;
     position: relative;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 .bluecolor {
 	background-color: blue;
