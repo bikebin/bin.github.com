@@ -100,7 +100,7 @@ $(function(){
 	});
 	$(".pause").on('click',function(){
 		audio.pause();
-	})
+	});
 	// 留言
 	
 })
