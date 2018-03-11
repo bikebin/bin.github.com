@@ -3,11 +3,11 @@
  * Created by ASUS on 2017/8/17.
  */
 $(function(){
-	$('[data-toggle="tooltip"]').tooltip();
+// 	$('[data-toggle="tooltip"]').tooltip();
 
-    $("#jd_close").on("click ",function(){
-        $("#top_banner").hide();
-    })
+//     $("#jd_close").on("click ",function(){
+//         $("#top_banner").hide();
+//     })
 
    
 
