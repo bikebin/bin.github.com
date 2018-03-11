@@ -14,19 +14,19 @@ $(function(){
     // $('.change .item').on('mouseenter',function(event) {
     //     $(body).background = 'blue';
     // })
-    var leader = 0 ,target = 0,timer = null;
+//     var leader = 0 ,target = 0,timer = null;
 
-	$("#article > li").on('click',function(){
-		$(this).addClass('.addcolor');
-		console.log($(this).index());
-		clearInterval(timer);
-		target = 500*($(this).index());
-		  //核心语句
+// 	$("#article > li").on('click',function(){
+// 		$(this).addClass('.addcolor');
+// 		console.log($(this).index());
+// 		clearInterval(timer);
+// 		target = 500*($(this).index());
+// 		  //核心语句
 		  
-		timer = setInterval(function(){
-			leader = leader +(target - leader)/10;  //他会走target的长度，这句是运动函数，不会减少它走的长度
-			window.scrollTo(0,leader);   //屏幕滑动(x,y)
-		},30)
+// 		timer = setInterval(function(){
+// 			leader = leader +(target - leader)/10;  //他会走target的长度，这句是运动函数，不会减少它走的长度
+// 			window.scrollTo(0,leader);   //屏幕滑动(x,y)
+// 		},30)
 		
 	})
 	// 背景变颜色
