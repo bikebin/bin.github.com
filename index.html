@@ -2,17 +2,19 @@
 <html >
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bikebin</title>
+    <link rel="shortcut icon" href="00.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.css"/>
     <link rel="stylesheet" href="index.css"/>
     <link rel="stylesheet" href="base.css"/>
-    <link rel="stylesheet" href="font-awesome.min.css">
+   
     
 	
 
 </head>
-<body ng-app="zns_weibo" ng-controller="weibo" scroll="no">	
+<body ng-app="zns_weibo" ng-controller="weibo" scroll="no"> 
 <!-- 导航 head-->
   <nav class="daohang navbar navbar-default navbar-fixed-top ">
     <div class="container">
@@ -75,14 +77,14 @@
 <!-- 导航 foot-->
 <!-- left-content head-->
  <div class="mp-three">
-  <audio src="Bigbang.mp3" id="audio"></audio>
+  <audio src="video/Bigbang.mp3" id="audio"></audio>
   <span class="open">open</span>
   <span class="pause">pause</span>
  </div>                                                   <!-- 栅栏与栅栏之间一定要有个row包裹 -->
 
 
   <ul class="navclass container">
-    <li class="navclass01">
+    <li class="navclass01" id="top">
       <div class="row zhu container">
           <div class="left-content col-md-3">
     <div>
@@ -267,7 +269,7 @@
           </div>
       </div>
     </li>
-    <li class="navclass02">
+    <li class="navclass02" id="read">
         <!-- 标题：文章赏析 -->
         <div class="container"><h3 class="content-title">文章赏析<i class="fa fa-book"></i></h3></div>
        
@@ -370,7 +372,7 @@
 
         
     </li>
-    <li class="navclass03">
+    <li class="navclass03 " id="movie" >
       <div class="container">
           <h3>电影时刻 <span class="label label-default">smile</span></h3>
           <div class="row rowflim">
@@ -408,7 +410,7 @@
       </div>
        
     </li>
-    <li class="navclass04" >
+    <li class="navclass04" id="rep">
         <div class="container">
         <h3>picture wall <span class="label label-default">pic</span></h3>
           <div class="seamless-view">
@@ -440,18 +442,18 @@
                 </div>
             <!--已留-->
                 <div class="commentOn">
-                    <div class="noContent" ng-show="replies.length==0">暂无留言</div>
+                    <div class="noContent" ng-show="replies.length==0"></div>
                     <div class="page">
                       <a href="javascript:;" ng-repeat="item in pages  track by $index" class="{{item.className}}" ng-click="getPage(item.num)">{{item.num}}</a>
                     </div>
                     <div class="messList">
                       <div class="reply" ng-repeat="reply in replies  track by $index">
-                            <p class="replyContent">{{reply.content}}</p>
+                            <p class="replyContent"></p>
                             <p class="operation">
-                                <span class="replyTime">{{reply.time*1000|date:"yyyy-MM-dd HH:mm:ss"}}</span>
+                                <span class="replyTime"></span>
                                 <span class="handle">
-                                  <a href="javascript:;" class="top_icon" ng-click="fnAcc(reply.id)">{{reply.acc}}</a>
-                                    <a href="javascript:;" class="down_icon" ng-click="fnRef(reply.id)">{{reply.ref}}</a>
+                                  <a href="javascript:;" class="top_icon" ng-click="fnAcc(reply.id)"></a>
+                                    <a href="javascript:;" class="down_icon" ng-click="fnRef(reply.id)">{</a>
                                     <a href="javascript:;" class="cut" ng-click="fnDel(reply.id)"></a>
                                 </span>
                             </p>
@@ -465,10 +467,10 @@
           
         </div>
     </li>
-    <li class="navclass05">
-        <div class="container">
+    <li class="navclass05" >
+        <div class="container" >
           <footer>
-              <nav class="foot-navs ">
+              <nav class="foot-navs" id="bottom">
                  <a href="#" class="col-md-3 visible-lg visible-md">
                      <span data-hover="迪丽热巴">我的女朋友</span>
                  </a>
@@ -490,26 +492,39 @@
     </li>
   </ul>
   
-  <ol id="article" class="container fr">
-    <li>首页</li>
-    <li>新闻</li>
-    <li>动态</li>
-    <li>风格</li>
-    <li>作品</li>
+  <ol id="dh" class="container nav navbar-nav fr">
+    <li><a href="#top">首页</a></li>
+    <li><a href="#read">阅读</a></li>
+    <li><a href="#movie">电影</a></li>
+    <li><a href="#rep">风格</a></li>
+    <li><a href="#bottom">底部</a></li>
   </ol> 
 
 
    
-   
+  
     <script src="jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <script src="index.js"></script>
+    <!-- <script src="public/js/navclass.js"></script> -->
+     <!-- <script src="public/js/daohang.js"></script> -->
     
-   
-    
+     <script src="public/js/jquery.singlePageNav.min.js"></script>
+     <!-- <script src="public/js/wow.min.js"></script> -->
+     <script>
+    $(function(){
+        /*导航跳转效果插件*/
+        $('.nav').singlePageNav({
+            offset: 30
+        });
+        /*小屏幕导航点击关闭菜单*/
+        // $('.navbar-collapse a').click(function(){
+        //     $('.navbar-collapse').collapse('hide');
+        // });
+       // new WOW().init();
+    })
      
-     
-
+  </script>
 
 
 </body>
