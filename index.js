@@ -3,32 +3,33 @@
  * Created by ASUS on 2017/8/17.
  */
 $(function(){
-// 	$('[data-toggle="tooltip"]').tooltip();
+	// $('[data-toggle="tooltip"]').tooltip();
 
-//     $("#jd_close").on("click ",function(){
-//         $("#top_banner").hide();
-//     })
+  
 
    
 
     // $('.change .item').on('mouseenter',function(event) {
     //     $(body).background = 'blue';
     // })
-//     var leader = 0 ,target = 0,timer = null;
+    //    $('.change .item').on('mouseout',function(event) {
+    //     $(body).background = 'yellow';
+    // })
+    // // var leader = 0 ,target = 0,timer = null;
 
-// 	$("#article > li").on('click',function(){
-// 		$(this).addClass('.addcolor');
-// 		console.log($(this).index());
-// 		clearInterval(timer);
-// 		target = 500*($(this).index());
-// 		  //核心语句
+	// $("#article > li").on('click',function(){
+	// 	$(this).addClass('.addcolor');
+		// console.log($(this).index());
+		// clearInterval(timer);
+		// target = 500*($(this).index());
+		  //核心语句
 		  
-// 		timer = setInterval(function(){
-// 			leader = leader +(target - leader)/10;  //他会走target的长度，这句是运动函数，不会减少它走的长度
-// 			window.scrollTo(0,leader);   //屏幕滑动(x,y)
-// 		},30)
+	// 	timer = setInterval(function(){
+	// 		leader = leader +(target - leader)/10;  //他会走target的长度，这句是运动函数，不会减少它走的长度
+	// 		window.scrollTo(0,leader);   //屏幕滑动(x,y)
+	// 	},30)
 		
-	})
+	// })
 	// 背景变颜色
 	$('.item01').on('mouseenter',function(){
 		$(document.body).get(0).style.backgroundColor = "#eae9fe";
@@ -93,6 +94,7 @@ $(function(){
 	// })
 	
 	// mp3播放器
+	
 	$(".open").on('click',function(){
 		audio.play();
 	});
